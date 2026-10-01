@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Dec 24 13:05:00 2023
+# Process ID: 15252
+# Current directory: C:/Users/User/OneDrive/Desktop/Traffic
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11164 C:\Users\User\OneDrive\Desktop\Traffic\Traffic.xpr
+# Log file: C:/Users/User/OneDrive/Desktop/Traffic/vivado.log
+# Journal file: C:/Users/User/OneDrive/Desktop/Traffic\vivado.jou
+# Running On: DESKTOP-E66V7O6, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 10, Host memory: 8300 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/User/OneDrive/Desktop/Traffic/Traffic.xpr
+update_compile_order -fileset sources_1

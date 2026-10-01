@@ -1,0 +1,50 @@
+environment:
+  max_timesteps: 500
+  max_queue: 40
+  yellow_duration: 2
+  service_rate: 2
+traffic:
+  scenario: uniform_medium
+  arrival_rates:
+    north: 0.3
+    south: 0.3
+    east: 0.3
+    west: 0.3
+reward:
+  type: R14
+  w1: 0.4850090500006374
+  w2: 0.016853237357850007
+  w3: 0.4981377126415127
+  w4: 2.0
+  base_reward_type: R7
+training:
+  episodes: 3000
+  learning_rate: 0.1
+  discount_factor: 0.95
+  epsilon_start: 1.0
+  epsilon_decay: 0.995
+  epsilon_min: 0.01
+  seed: 42
+dqn:
+  episodes: 500
+  learning_rate: 0.001
+  discount_factor: 0.95
+  epsilon_start: 1.0
+  epsilon_decay: 0.995
+  epsilon_min: 0.05
+  replay_capacity: 50000
+  batch_size: 64
+  hidden_size: 128
+  target_update_steps: 250
+  warmup_steps: 200
+  gradient_clip: 5.0
+evaluation:
+  episodes: 100
+  epsilon: 0.0
+  seed_offsets: 10000,20000,30000
+fixed_time:
+  green_duration: 20
+visualization:
+  agent: fixed_time
+  max_steps: 160
+  fps: 6

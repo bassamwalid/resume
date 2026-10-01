@@ -1,0 +1,17 @@
+function a=acc1(output, input)
+
+r1 = 210;
+r2 = 400;
+r4 = 430;
+w1 = 10;
+w2 = input(1);
+w4 = input(2);
+theta1 = input(3);
+theta2 = input(4);
+theta4 = input(5);
+
+
+a=[ -output(1)*r2*sin(theta2) - w2*w2*r2*cos(theta2) - w1*w1*r1*cos(theta1) + output(2)*r4*sin(theta4) + w4*w4*r4*cos(theta4);
+    output(1)*r2*cos(theta2) - w2*w2*r2*sin(theta2) - w1*w1*r1*sin(theta1) - output(2)*r4*cos(theta4) - w4*w4*r4*sin(theta4)];
+
+end

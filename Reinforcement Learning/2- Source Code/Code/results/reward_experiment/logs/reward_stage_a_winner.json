@@ -1,0 +1,24 @@
+{
+  "winner": {
+    "stage": "A",
+    "reward_id": "R7",
+    "formula": "-w1 * queue_delta - w2 * total_waiting_time + w3 * throughput",
+    "base_reward_type": "R1",
+    "w1": 0.4850090500006374,
+    "w2": 0.016853237357850007,
+    "w3": 0.4981377126415127,
+    "w4": 0.0,
+    "avg_queue": 17.540359999999993,
+    "avg_wait": 18.705050000000007,
+    "throughput": 582.345,
+    "phase_switches": 66.22166666666666,
+    "switches": 66.22166666666666,
+    "queue_improvement": 0.506517738860655,
+    "wait_improvement": 0.4899289822514404,
+    "throughput_improvement": 0.035721908014086076,
+    "switch_penalty_score": 2.018766144962772,
+    "raw_score": 0.2038464555513782,
+    "score_percent": 20.38464555513782,
+    "comment": "Normalized full composite reward."
+  }
+}

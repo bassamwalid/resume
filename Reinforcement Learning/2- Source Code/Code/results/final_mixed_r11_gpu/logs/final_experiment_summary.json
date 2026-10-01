@@ -1,0 +1,52 @@
+{
+  "scenarios": [
+    "low_uniform",
+    "uniform_medium",
+    "high_uniform",
+    "uneven",
+    "rush_hour"
+  ],
+  "controllers": [
+    "fixed_time",
+    "q_learning",
+    "sarsa",
+    "dqn"
+  ],
+  "eval_base_seeds": [
+    10042,
+    20042,
+    30042
+  ],
+  "eval_episodes_per_seed_per_scenario": 100,
+  "total_eval_episodes_per_controller": 1500,
+  "verdict": [
+    {
+      "controller": "q_learning",
+      "low_uniform": 15.466207334740284,
+      "uniform_medium": 23.683971886707695,
+      "high_uniform": 2.7065013186901674,
+      "uneven": 25.66945296150153,
+      "rush_hour": 23.413105575825412,
+      "overall_mean_score": 18.18784781549302,
+      "score_std": 9.494268406378428,
+      "overall_avg_wait": 25.67063362505487,
+      "overall_avg_queue": 24.530338010871628,
+      "overall_phase_switches": 38.23533333333334,
+      "final_comment": "winner: higher overall mean score"
+    },
+    {
+      "controller": "sarsa",
+      "low_uniform": 15.08338349943134,
+      "uniform_medium": 23.674460578377747,
+      "high_uniform": 1.2587729424786336,
+      "uneven": 21.894710470314113,
+      "rush_hour": 17.789322606940157,
+      "overall_mean_score": 15.940130019508398,
+      "score_std": 8.873734712443607,
+      "overall_avg_wait": 24.42149906353219,
+      "overall_avg_queue": 23.26736387476614,
+      "overall_phase_switches": 44.099333333333334,
+      "final_comment": ""
+    }
+  ]
+}

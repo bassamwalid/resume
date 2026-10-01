@@ -1,0 +1,82 @@
+running egg_info
+creating ../build/Autonomous_Systems_Project_Team_18/Autonomous_Systems_Project_Team_18.egg-info
+writing ../build/Autonomous_Systems_Project_Team_18/Autonomous_Systems_Project_Team_18.egg-info/PKG-INFO
+writing dependency_links to ../build/Autonomous_Systems_Project_Team_18/Autonomous_Systems_Project_Team_18.egg-info/dependency_links.txt
+writing entry points to ../build/Autonomous_Systems_Project_Team_18/Autonomous_Systems_Project_Team_18.egg-info/entry_points.txt
+writing requirements to ../build/Autonomous_Systems_Project_Team_18/Autonomous_Systems_Project_Team_18.egg-info/requires.txt
+writing top-level names to ../build/Autonomous_Systems_Project_Team_18/Autonomous_Systems_Project_Team_18.egg-info/top_level.txt
+writing manifest file '../build/Autonomous_Systems_Project_Team_18/Autonomous_Systems_Project_Team_18.egg-info/SOURCES.txt'
+reading manifest file '../build/Autonomous_Systems_Project_Team_18/Autonomous_Systems_Project_Team_18.egg-info/SOURCES.txt'
+writing manifest file '../build/Autonomous_Systems_Project_Team_18/Autonomous_Systems_Project_Team_18.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build
+creating /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib
+creating /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18
+copying Autonomous_Systems_Project_Team_18/Planning_Empty_Team_18.py -> /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18
+copying Autonomous_Systems_Project_Team_18/__init__.py -> /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18
+copying Autonomous_Systems_Project_Team_18/Autonomous_Systems_MS_3_CLR_Alg_1_Speed_Team_18.py -> /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18
+copying Autonomous_Systems_Project_Team_18/Autonomous_Systems_MS_2_OLR_Team_18.py -> /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18
+copying Autonomous_Systems_Project_Team_18/Lateral_Racing_Team_18.py -> /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18
+copying Autonomous_Systems_Project_Team_18/Lateral_City_Team_18.py -> /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18
+copying Autonomous_Systems_Project_Team_18/Planning_Racing_Team_18.py -> /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18
+copying Autonomous_Systems_Project_Team_18/Autonomous_Systems_MS_2_Teleop_Team_18.py -> /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18
+copying Autonomous_Systems_Project_Team_18/Lateral_Empty_Team_18.py -> /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18
+copying Autonomous_Systems_Project_Team_18/Autonomous_Systems_MS_5_Localization_Team_18.py -> /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18
+copying Autonomous_Systems_Project_Team_18/Planning_City_Team_18.py -> /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18
+copying Autonomous_Systems_Project_Team_18/Cmd_Mixer_Team_18.py -> /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18
+running install
+running install_lib
+creating /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18
+copying /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18/Planning_Empty_Team_18.py -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18
+copying /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18/__init__.py -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18
+copying /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18/Autonomous_Systems_MS_3_CLR_Alg_1_Speed_Team_18.py -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18
+copying /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18/Autonomous_Systems_MS_2_OLR_Team_18.py -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18
+copying /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18/Lateral_Racing_Team_18.py -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18
+copying /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18/Lateral_City_Team_18.py -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18
+copying /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18/Planning_Racing_Team_18.py -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18
+copying /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18/Autonomous_Systems_MS_2_Teleop_Team_18.py -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18
+copying /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18/Lateral_Empty_Team_18.py -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18
+copying /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18/Autonomous_Systems_MS_5_Localization_Team_18.py -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18
+copying /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18/Planning_City_Team_18.py -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18
+copying /home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/build/lib/Autonomous_Systems_Project_Team_18/Cmd_Mixer_Team_18.py -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18
+byte-compiling /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18/Planning_Empty_Team_18.py to Planning_Empty_Team_18.cpython-312.pyc
+byte-compiling /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18/Autonomous_Systems_MS_3_CLR_Alg_1_Speed_Team_18.py to Autonomous_Systems_MS_3_CLR_Alg_1_Speed_Team_18.cpython-312.pyc
+byte-compiling /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18/Autonomous_Systems_MS_2_OLR_Team_18.py to Autonomous_Systems_MS_2_OLR_Team_18.cpython-312.pyc
+byte-compiling /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18/Lateral_Racing_Team_18.py to Lateral_Racing_Team_18.cpython-312.pyc
+byte-compiling /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18/Lateral_City_Team_18.py to Lateral_City_Team_18.cpython-312.pyc
+byte-compiling /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18/Planning_Racing_Team_18.py to Planning_Racing_Team_18.cpython-312.pyc
+byte-compiling /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18/Autonomous_Systems_MS_2_Teleop_Team_18.py to Autonomous_Systems_MS_2_Teleop_Team_18.cpython-312.pyc
+byte-compiling /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18/Lateral_Empty_Team_18.py to Lateral_Empty_Team_18.cpython-312.pyc
+byte-compiling /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18/Autonomous_Systems_MS_5_Localization_Team_18.py to Autonomous_Systems_MS_5_Localization_Team_18.cpython-312.pyc
+byte-compiling /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18/Planning_City_Team_18.py to Planning_City_Team_18.cpython-312.pyc
+byte-compiling /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18/Cmd_Mixer_Team_18.py to Cmd_Mixer_Team_18.cpython-312.pyc
+running install_data
+creating /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/share/ament_index
+creating /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/share/ament_index/resource_index
+creating /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/share/ament_index/resource_index/packages
+copying resource/Autonomous_Systems_Project_Team_18 -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/share/ament_index/resource_index/packages
+copying package.xml -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/share/Autonomous_Systems_Project_Team_18
+creating /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/share/Autonomous_Systems_Project_Team_18/Worlds
+copying Worlds/Empty_Track.world -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/share/Autonomous_Systems_Project_Team_18/Worlds
+copying Worlds/Racing_Track.world -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/share/Autonomous_Systems_Project_Team_18/Worlds
+copying Worlds/City_Track.world -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/share/Autonomous_Systems_Project_Team_18/Worlds
+creating /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/share/Autonomous_Systems_Project_Team_18/launch
+copying launch/Autonomous_Systems_MS_5_Team_18_launch.py -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/share/Autonomous_Systems_Project_Team_18/launch
+copying launch/Autonomous_Systems_MS_4_Team_18_launch.py -> /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/share/Autonomous_Systems_Project_Team_18/launch
+running install_egg_info
+Copying ../build/Autonomous_Systems_Project_Team_18/Autonomous_Systems_Project_Team_18.egg-info to /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/python3.12/site-packages/Autonomous_Systems_Project_Team_18-0.0.1-py3.12.egg-info
+running install_scripts
+Installing Cmd_Mixer_node script to /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/Autonomous_Systems_Project_Team_18
+Installing Lateral_City_node script to /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/Autonomous_Systems_Project_Team_18
+Installing Lateral_Empty_node script to /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/Autonomous_Systems_Project_Team_18
+Installing Lateral_Racing_node script to /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/Autonomous_Systems_Project_Team_18
+Installing Localization_node script to /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/Autonomous_Systems_Project_Team_18
+Installing OLR_node script to /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/Autonomous_Systems_Project_Team_18
+Installing Planning_City_node script to /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/Autonomous_Systems_Project_Team_18
+Installing Planning_Empty_node script to /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/Autonomous_Systems_Project_Team_18
+Installing Planning_Racing_node script to /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/Autonomous_Systems_Project_Team_18
+Installing Speed_Controller_node script to /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/Autonomous_Systems_Project_Team_18
+Installing Teleop_node script to /home/yassin-fakhry/ros2_ws/install/Autonomous_Systems_Project_Team_18/lib/Autonomous_Systems_Project_Team_18
+writing list of installed files to '/home/yassin-fakhry/ros2_ws/build/Autonomous_Systems_Project_Team_18/install.log'

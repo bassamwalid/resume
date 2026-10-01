@@ -1,0 +1,4 @@
+eval_set,eval_base_seed,first_episode_seed,last_episode_seed,episodes,mean_cumulative_reward,mean_average_queue_length,mean_average_waiting_time,mean_total_throughput,mean_phase_switches,overflow_episodes,mean_abs_queue_delta,mean_total_waiting_time,mean_throughput_component,mean_total_queue_component,mean_max_red_queue_component,mean_switch_component
+1,10042,10042,10141,100,-176.6235126739525,17.661699999999996,18.824099999999998,581.2,71.53,0,1.10468,18.8241,1.1624,17.6617,7.3759,0.14306
+2,20042,20042,20141,100,-176.1567407766141,17.586439999999993,18.749720000000003,581.64,71.31,0,1.10216,18.74972,1.16328,17.58644,7.33662,0.14262
+3,30042,30042,30141,100,-179.28034825108767,17.872339999999998,19.038519999999995,583.09,71.33,0,1.09862,19.03852,1.16618,17.87234,7.45348,0.14266

@@ -1,0 +1,131 @@
+close
+clc % Clears command window
+
+i = 1; % Index initialization
+options = optimset('display', 'off');
+
+% Preallocate matrices for efficiency and to fix sizes
+output = zeros(1, 361);        % 1x361 (for theta values)
+theta24 = zeros(2, 361);       % 2x361 (Theta2 and Theta4 results)
+theta5 = zeros(1, 361);        % 1x361 (Theta5 results)
+r6theta6 = zeros(2, 361);      % 2x361 (r6 and Theta6 results)
+w2w4 = zeros(2,361);           % 2x361 (w2 and w4 results)
+rdot6w6 = zeros(2,361);           % 2x361 (rdot6 and w6 results)
+a2a4 = zeros(2,361);           % 2x361 (a2 and a4 results)
+a6r6dotdot = zeros(2,361);           % 2x361 (a6 and r6 double dot results)
+
+for theta = 0:1:360 
+    output(i) = theta; % Store current theta value
+
+    % Solve position equations
+    theta24(:, i) = fsolve(@position, [1 1], options, theta) * 180 / pi; % Store Theta2 and Theta4
+    theta5(i) = theta24(2, i) - 23.7;                                   % Compute Theta5
+    
+    % Solve position2 equations
+    r6theta6(:, i) = fsolve(@position2, [400, 1], options, theta5(i));   % Store r6 and Theta6
+
+    r6theta6(2,i) = r6theta6(2,i)*180/pi;
+
+    % solve velocity1 equations
+    input1 = [theta*pi/180, theta24(1,i)*pi/180, theta24(2,i)*pi/180];  
+    w2w4(:,i) = fsolve(@velocity, [1 1], options, input1);     % Store w2 and w4
+
+    % solve velocity2 equations
+    input2 = [w2w4(2,i), theta5(i)*pi/180, r6theta6(2,i)*pi/180, r6theta6(1,i)];
+    rdot6w6(:,i) = fsolve(@velocity2, [1 1], options, input2);   % Store r6 dot and w6
+
+
+
+    %solve acc1 equations
+    input3 = [w2w4(1,i), w2w4(2,i), theta*pi/180, theta24(1,i)*pi/180, theta24(2,i)*pi/180];
+    a2a4(:,i) = fsolve(@acc1, [1 1], options, input3);     % Store a2 and a4
+
+    %solve acc2 equations
+    input4 = [r6theta6(1,i), rdot6w6(1,i), w2w4(2,i), rdot6w6(2,i), theta5(i)*pi/180, r6theta6(2,i)*pi/180, a2a4(2,i)];
+    a6r6dotdot(:,i) = fsolve(@acc2, [1 1], options, input4);   % Store a6 and r6 double dot
+
+    
+    i = i + 1; % Increment index
+
+end 
+
+% First Figure: position
+figure(1);
+
+subplot(4, 1, 1);
+plot(output, theta24(1, :));
+xlabel('degrees');
+ylabel('Theta 2');
+title('Graph 1: Theta 2');
+
+subplot(4, 1, 2);
+plot(output, theta24(2, :));
+xlabel('degrees');
+ylabel('Theta 4');
+title('Graph 2: Theta4');
+
+subplot(4, 1, 3);
+plot(output, r6theta6(2, :));
+xlabel('degrees');
+ylabel('Theta 6');
+title('Graph 4: Theta6');
+
+subplot(4, 1, 4);
+plot(output, r6theta6(1, :));
+xlabel('degrees');
+ylabel('r6/mm');
+title('Graph 5: r6');
+
+% Second Figure: Velocity
+figure(2);
+
+subplot(4, 1, 1);
+plot(output, w2w4(1, :));
+xlabel('degrees');
+ylabel('w2');
+title('Graph 6: w2');
+
+subplot(4, 1, 2);
+plot(output, w2w4(2, :));
+xlabel('degrees');
+ylabel('w4');
+title('Graph 7: w4');
+
+subplot(4, 1, 3);
+plot(output, rdot6w6(2, :));
+xlabel('degrees');
+ylabel('w6');
+title('Graph 8: w6');
+
+subplot(4, 1, 4);
+plot(output, rdot6w6(1, :));
+xlabel('degrees');
+ylabel('r6 dot/mms^-1');
+title('Graph 9: r6dot');
+
+% third Figure: acceleration
+figure(3);
+
+subplot(4, 1, 1);
+plot(output, a2a4(1, :));
+xlabel('degrees');
+ylabel('a2');
+title('Graph 10: a2');
+
+subplot(4, 1, 2);
+plot(output, a2a4(2, :));
+xlabel('degrees');
+ylabel('a4');
+title('Graph 11: a4');
+
+subplot(4, 1, 3);
+plot(output, a6r6dotdot(1, :));
+xlabel('degrees');
+ylabel('a6');
+title('Graph 12: a6');
+
+subplot(4, 1, 4);
+plot(output, a6r6dotdot(2, :));
+xlabel('degrees');
+ylabel('r6 double dot mm/s^-2');
+title('Graph 13: r6 double dot');
