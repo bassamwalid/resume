@@ -1,0 +1,33 @@
+# Files that programs create automatically.
+# Git ignores anything that matches these patterns, so they won't be uploaded again.
+
+# MATLAB / Simulink
+*.asv
+*.slxc
+slprj/
+
+# Python
+__pycache__/
+*.pyc
+
+# ROS 2 build output
+build/
+install/
+log/
+
+# Vivado (FPGA)
+*.runs/
+*.sim/
+*.cache/
+*.hw/
+*.jou
+*.dcp
+
+# Backups and log files
+*.bak
+*.log
+
+# Windows / macOS system files
+Thumbs.db
+desktop.ini
+.DS_Store
