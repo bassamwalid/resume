@@ -1,44 +1,44 @@
-# 🚗 Autonomous Path-Tracking Vehicle
+# Autonomous Path-Tracking Vehicle
 
-**Autonomous Systems (MCTR 1002) · German University in Cairo · Spring 2026 · Team 18 (6 students)**
+**Autonomous Systems (MCTR 1002) · German University in Cairo · Spring 2026 · Team project (6 members)**
 
 <p align="center">
   <img src="images/car.jpg" height="300">
   <img src="images/city-track-results.jpg" height="300">
 </p>
 
-📄 [Read the report (PDF)](1-%20Project%20Report/Report.pdf)
+**Documentation:** [Project report (PDF)](1-%20Project%20Report/Report.pdf)
 
-## Summary
+## Overview
 
-A small self-driving car that follows a path, changes lanes to avoid obstacles and drives around a city-style track on its own. The software was first built and tested in a Gazebo simulation with ROS 2, then moved to a real car controlled by a Raspberry Pi 5 and an Arduino.
+A small-scale autonomous vehicle capable of path following, obstacle-avoiding lane changes and navigation of a curved city circuit. The ROS 2 software stack was developed and validated in Gazebo simulation before deployment on a physical vehicle built around a Raspberry Pi 5 and an Arduino Uno.
 
-## Results on the real car
+## Key Results (Physical Vehicle)
 
-| Track | Result |
+| Test track | Result |
 |---|---|
-| Straight track (10 m) | Stayed within **4.5 cm** of the center line |
-| Two-lane track with obstacles | Changed lanes around 2 obstacles with a maximum error of **3.4 cm** |
-| City track with curves | Completed a **full lap** and returned to the start |
+| Straight track (10 m) | Lateral deviation below **4.5 cm** |
+| Two-lane track with obstacles | Lane changes around two obstacles with a maximum cross-track error of **3.4 cm** |
+| Curved city track | Completed a **full lap** and returned to the start zone |
 
-## How it works
+## Technical Approach
 
-**Simulation (Gazebo + ROS 2).** The team built a Kalman filter that cleans up noisy position data, path planners for three different tracks, steering controllers (Pure Pursuit, plus a Stanley controller for the city track) and a speed controller.
+**Simulation (ROS 2 / Gazebo).** Kalman-filter localization on noisy odometry, path planners for three track layouts, lateral control with Pure Pursuit (and a Stanley controller on the city track), and closed-loop speed control.
 
-**Real car.** The Raspberry Pi 5 runs ROS 2: it plans the path and calculates the steering angle with Pure Pursuit, looking further ahead the faster the car drives. The Arduino Uno reads the wheel encoder and the MPU6050 gyroscope, estimates where the car is, filters out sensor noise, and controls the drive motor and the steering servo. The two boards talk over a USB serial cable.
+**Physical vehicle.** The Raspberry Pi 5 runs the ROS 2 planning and Pure Pursuit nodes with a speed-scaled lookahead distance. The Arduino Uno performs encoder- and IMU-based (MPU6050) dead reckoning with digital filtering, runs the low-level motor-speed loop and drives the steering servo. The two boards communicate over a USB serial link.
 
-## My role
+## My Role
 
-✏️ *[Replace this line with 1–2 sentences about what you personally did in this project.]*
+Developed the Pure Pursuit path-tracking controller and deployed it on the Raspberry Pi; the vehicle followed the planned path both in the ROS 2/Gazebo simulation and on the physical hardware.
 
-## What's in this folder
+## Repository Contents
 
 | Folder | Contents |
 |---|---|
 | [1- Project Report](1-%20Project%20Report/) | Final report (PDF) |
 | [2- Presentation PPT](2-%20Presentation%20PPT/) | Presentation and poster |
-| [3- Source Code & Other Relevent Data](3-%20Source%20Code%20%26%20Other%20Relevent%20Data/) | `ROS2` = simulation code (planners, controllers, Kalman filter, Gazebo tracks) · `Pi` = code for the real car · `Arduino` = motor and sensor code · `Test Data` = result plots |
-| [4- Videos](4-%20Videos/) | Test-drive videos (zip) |
+| [3- Source Code & Other Relevent Data](3-%20Source%20Code%20%26%20Other%20Relevent%20Data/) | `ROS2`: simulation package (planners, controllers, Kalman filter, Gazebo worlds) · `Pi`: ROS 2 code for the physical vehicle · `Arduino`: low-level motor and sensor firmware · `Test Data`: result plots |
+| [4- Videos](4-%20Videos/) | Test-run videos (zip) |
 
 **Team:** Youssef Mohamed, Bassam Walid, Styven Hany, Somaya Magdy, Yassin Hesham, Mostafa Shakweer<br>
 **Tools:** ROS 2 · Python · Gazebo · Raspberry Pi 5 · Arduino (C++) · MPU6050 IMU · Kalman filter · Pure Pursuit · Stanley controller

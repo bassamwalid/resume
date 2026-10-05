@@ -1,41 +1,41 @@
-# 🧗 Wall-Climbing RC Car
+# Wall-Climbing RC Robot
 
-**Mechatronics Engineering (MCTR 601) · German University in Cairo · Spring 2024 · Team of 3**
+**Mechatronics Engineering (MCTR 601) · German University in Cairo · Spring 2024 · Team project (3 members)**
 
 <p align="center">
   <img src="images/prototype.jpg" height="260">
   <img src="images/cad.jpg" height="260">
 </p>
 
-📄 [Read the report (PDF)](1-%20Project%20Report/Final%20Report.pdf)
+**Documentation:** [Project report (PDF)](1-%20Project%20Report/Final%20Report.pdf)
 
-## Summary
+## Overview
 
-A remote-controlled car that can drive up walls. A propeller pushes the car against the wall so the wheels can grip, and a gyroscope-based controller tilts the propeller to keep the car stable. It is driven from a phone over Bluetooth.
+A remote-controlled robot capable of driving on walls of varying inclination. Propeller thrust presses the four-wheel-drive chassis against the surface to generate traction, while gyroscope-driven PID control adjusts the propeller direction to counter gravity, allowing the robot to hold its position or drive on the wall. The robot is operated from a smartphone via Bluetooth.
 
-## How it works
+## Technical Approach
 
-**Mechanical design.** The first prototype was made of balsa wood — it could hold itself on a wall, but the axles bent under the propeller's force. The final chassis was designed in SolidWorks and 3D-printed in PLA, with supports for the axles, the heavy parts placed low, and 3D-printed wheels with bicycle-tire rubber for more grip. The propeller's thrust was measured on a scale to make sure it was strong enough.
+**Mechanical design.** A balsa-wood prototype validated the concept by holding itself on a wall unaided, but revealed axle bending under propeller load. The final chassis was designed in SolidWorks and 3D-printed in PLA, with axle supports, a lowered center of mass, and 3D-printed wheels fitted with bicycle-tire rubber for additional grip. Propeller thrust was measured experimentally to confirm the required wall-adhesion force.
 
-**Electronics.** An STM32 "Blue Pill" microcontroller, an A2212 brushless motor with a 12-inch propeller and a 30 A speed controller (3S LiPo battery), an MPU6050 gyroscope, servo motors, an L298N driver for the four wheel motors, and an HC-05 Bluetooth module.
+**Electronics.** STM32F103 ("Blue Pill") microcontroller, A2212 brushless motor with a 12-inch propeller and a 30 A ESC powered by a 3S LiPo battery, MPU6050 gyroscope, servo motors, an L298N driver for the four wheel motors, and an HC-05 Bluetooth module.
 
-**Software.** FreeRTOS runs two tasks at the same time: one reads the gyroscope and adjusts the propeller angle through a servo, and the other receives commands from the phone. The servo controller was tuned in MATLAB/Simulink.
+**Software.** FreeRTOS runs concurrent tasks for propeller-angle control and Bluetooth command handling; the servo control loop was tuned in MATLAB/Simulink.
 
 <p align="center"><img src="images/wiring.jpg" width="70%"></p>
 
-## My role
+## My Role
 
-✏️ *[Replace this line with 1–2 sentences about what you personally did in this project.]*
+Engineered the STM32-based control system, in which gyroscope-driven PID control adjusts the propeller direction to counter gravity so that the robot can hold its position or drive on walls of varying inclination.
 
-## What's in this folder
+## Repository Contents
 
 | Folder | Contents |
 |---|---|
 | [1- Project Report](1-%20Project%20Report/) | Final report (PDF) |
-| [2- Source Code](2-%20Source%20Code/) | STM32 code (Arduino IDE): the final version plus test programs for the motor, gyroscope and Bluetooth |
-| [3- Solid Works](3-%20Solid%20Works/) | 3D models (zip) |
+| [2- Source Code](2-%20Source%20Code/) | STM32 firmware (Arduino IDE): final version and test programs for the motor, gyroscope and Bluetooth |
+| [3- Solid Works](3-%20Solid%20Works/) | CAD models (zip) |
 | [4- Pictures](4-%20Pictures/) | Wiring diagram |
-| [5- Videos](5-%20Videos/) | Demo videos |
+| [5- Videos](5-%20Videos/) | Demonstration videos |
 
 **Team:** Bassam Walid, Styven Hany, Youssef Mohamed<br>
 **Tools:** STM32 · FreeRTOS · C/C++ · SolidWorks · 3D printing · MATLAB/Simulink

@@ -1,9 +1,7 @@
-# 🦾 sEMG-Controlled Tendon-Driven Prosthetic Hand
+# sEMG-Controlled Tendon-Driven Prosthetic Hand
 
-**Bachelor Thesis · Mechatronics Engineering · German University in Cairo · 2025**<br>
+**Bachelor Thesis (Grade A+) · Mechatronics Engineering · German University in Cairo · May 2025**<br>
 Official title: *Brain-Computer Interface for Prosthetic Device Using EMG* · Supervisor: Assoc. Prof. Dr. Eng. Amir Roushdy Ali
-
-🏆 Selected for presentation at ✏️ *[conference name, city, year]*, Germany.
 
 <p align="center">
   <img src="images/hand.jpg" width="24%">
@@ -12,48 +10,49 @@ Official title: *Brain-Computer Interface for Prosthetic Device Using EMG* · Su
   <img src="images/grip-scissors.jpg" width="24%">
 </p>
 
-📄 [Read the full thesis (PDF)](1-%20Thesis/Thesis%202.0.pdf)
+**Documentation:** [Full thesis (PDF)](1-%20Thesis/Thesis%202.0.pdf)
 
-## Summary
+## Overview
 
-A low-cost bionic hand for people with a below-elbow amputation. It reads the electrical signals of the forearm muscles (surface EMG, or sEMG) and turns them into finger movements. The goal was a useful prosthetic hand that people in Egypt can actually afford.
+Design, development and validation of a low-cost, tendon-driven bionic hand for below-elbow amputees, controlled in real time by surface electromyography (sEMG) signals from the forearm. The project addresses the cost and accessibility barriers that limit access to myoelectric prostheses in Egypt.
 
-## Results
+## Key Results
 
-| Test | Result |
+| Metric | Result |
 |---|---|
-| Detecting a full grip or a wrist bend | **100 %** correct (10 users) |
-| Detecting single-finger movements | **98.25 %** correct (7 mistakes in 400 movements) |
-| Load it can carry | **5 kg** |
-| Time to close a finger | **about 0.84 s** |
-| Battery charging (USB-C) | **full in 27 minutes** |
-| Total cost | **about 5,000 EGP** |
+| Grip and wrist-flexion detection | **100%** (10 test subjects) |
+| Individual finger-flexion detection | **98.25%** (7 errors in 400 movements) |
+| Load capacity | **5 kg (≈ 49 N)** without holding torque |
+| Finger range of motion | Up to **95°** |
+| Finger flexion time | **0.835 s** (calculated) |
+| Battery charging (USB-C) | Full charge in **27 min** |
+| Total cost | **≈ 5,000 EGP (≈ US$100)** |
 
-## How it works
+## Technical Approach
 
-**Mechanical design.** Each finger works like a real tendon: a strong braided fishing line pulls the finger closed, and an elastic band pulls it open again. Small rubber pads between the joints absorb shocks like cartilage. The hand went through 11 design versions in SolidWorks; the final version has 151 parts and is 3D-printed in PLA.
+**Mechanical design.** Tendon-driven fingers: braided fishing line provides active flexion, elastic bands provide passive extension, and rubber dampers between the phalanges emulate cartilage. The hand was refined over 11 SolidWorks iterations into a 151-part assembly and 3D-printed in PLA and TPU.
 
-**Motors and electronics.** Four small N20 gear motors (modified to run twice as fast) move the fingers through TB6612FNG motor drivers, and an MG90S servo rotates the thumb. Everything is controlled by an STM32F401 microcontroller. A custom 2-cell LiPo battery with a protection board charges from any USB-C charger, and the hand automatically stops moving while it charges.
+**Actuation and power.** Four gearbox-modified N20 DC motors driven by TB6612FNG drivers actuate the fingers, and an MG90S servo provides thumb opposition. A custom 2S LiPo battery with a battery-management system supports USB-C charging, and actuation is disabled automatically while the hand is charging.
 
-**Reading the muscle signals.** Electrodes on the forearm feed a muscle sensor that filters and amplifies the signal. When the hand is switched on, it records 5 seconds of the relaxed muscle, smooths the signal and calculates its own on/off threshold for that person. This lets it work for different users and muscles without any machine learning.
+**Signal processing and control.** An STM32F401 microcontroller samples the conditioned sEMG signal every 10 ms. After a 5-second self-calibration on the relaxed muscle, the signal is smoothed with an exponential moving average and compared against an adaptive threshold with hysteresis, enabling reliable, user-independent control without machine learning.
 
-**Testing.** Ten people tested the hand. It held a mug, a phone, scissors, a pencil and a full 0.6 L water bottle, and lifted a 5 kg dumbbell. The *flexor digitorum superficialis* muscle gave the most reliable signal.
+**Experimental validation.** The system was tested on 10 subjects with electrodes on different forearm muscle groups; the flexor digitorum superficialis provided the most reliable signal. The hand performed multiple grip patterns, grasping a mug, a phone, scissors, a pencil and a full 0.6 L water bottle, and lifted a 5 kg dumbbell.
 
-## Follow-up project: bond-graph model (2026)
+## Follow-up: Bond-Graph Model (2026)
 
-For the course *Mechatronics Programming for Real-Time Systems (MCTR 1015)*, the whole hand — battery, motors, gearboxes, tendons and finger joints — was modeled as a bond graph in 20-sim. The model gives the system's state-space equations, simulates finger and thumb motion at different battery voltages, and was compared with the real hand's measured finger-closing time. Team: Bassam Walid, Youssef Mohamed. Files: [8- Bond Graph Analysis](8-%20Bond%20Graph%20Analysis/).
+In the course *Mechatronics Programming for Real-Time Systems (MCTR 1015)*, the hand's dynamics were modeled with bond graphs in 20-sim, covering the sEMG signal chain, DC motors, gearing, tendon compliance and finger joints. The resulting state-space model was tuned against target values of 40 N tendon force and 45° joint flexion. Team: Bassam Walid, Youssef Mohamed. Files: [8- Bond Graph Analysis](8-%20Bond%20Graph%20Analysis/).
 
-## What's in this folder
+## Repository Contents
 
 | Folder | Contents |
 |---|---|
 | [1- Thesis](1-%20Thesis/) | Full thesis (PDF) |
-| [2- Presentation PPT](2-%20Presentation%20PPT/) | Thesis presentation |
-| [3- Source Arduino Code](3-%20Source%20Arduino%20Code/) | Microcontroller code — the final version is in `V6_FinalVersion` |
-| [4- Solid Works](4-%20Solid%20Works/) | Final 3D model (zip) |
-| [5- Pictures](5-%20Pictures/) | Photos of the hand and a step-by-step user guide (charging, electrode placement) |
-| [6- Videos](6-%20Videos/) | Grip tests, finger movement and EMG control demos |
-| [7- Previous Design Iterations](7-%20Previous%20Design%20Iterations/) | Earlier 3D-model versions |
-| [8- Bond Graph Analysis](8-%20Bond%20Graph%20Analysis/) | 20-sim models, report and slides |
+| [2- Presentation PPT](2-%20Presentation%20PPT/) | Thesis defense presentation |
+| [3- Source Arduino Code](3-%20Source%20Arduino%20Code/) | Microcontroller firmware; the final version is `V6_FinalVersion` |
+| [4- Solid Works](4-%20Solid%20Works/) | Final CAD model (zip) |
+| [5- Pictures](5-%20Pictures/) | Prototype photos and an illustrated user guide (charging, electrode placement) |
+| [6- Videos](6-%20Videos/) | Grip tests, finger flexion and sEMG control demonstrations |
+| [7- Previous Design Iterations](7-%20Previous%20Design%20Iterations/) | Earlier CAD iterations |
+| [8- Bond Graph Analysis](8-%20Bond%20Graph%20Analysis/) | 20-sim models, report and presentation |
 
-**Tools:** SolidWorks · 3D printing · STM32 · C/C++ (Arduino IDE) · EMG sensors · 20-sim
+**Tools:** SolidWorks · 3D printing (PLA, TPU) · STM32 · C/C++ · sEMG sensors · 20-sim

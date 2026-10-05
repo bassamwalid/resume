@@ -1,40 +1,40 @@
-# 🔄 Nonlinear Control of a Furuta Pendulum
+# Nonlinear Control of a Furuta Pendulum
 
-**Course project · German University in Cairo · Winter 2025 · Team 29 (6 students)**
+**Course project · German University in Cairo · Winter 2025 · Team project (6 members)**
 
 <p align="center"><img src="images/rig.jpg" height="340"></p>
 
-📄 [Read the report (PDF)](1-%20Project%20Report/Advanced%20Team29.pdf)
+**Documentation:** [Project report (PDF)](1-%20Project%20Report/Advanced%20Team29.pdf)
 
-## Summary
+## Overview
 
-The Furuta pendulum is a classic control challenge: a motor turns a horizontal arm, and a free-swinging pendulum on the end of the arm has to be balanced upside down. We modeled the system mathematically and designed a nonlinear controller that balances it.
+The Furuta (rotary inverted) pendulum is a benchmark underactuated, nonlinear control problem: a motor drives a horizontal arm, and the unactuated pendulum at its end must be stabilized in the upright position. This project covers the modeling, nonlinear controller design and real-time validation of the system.
 
-## Result
+## Results
 
-In simulation, the controller brings the pendulum upright in about **0.5 seconds** and keeps it there from different starting angles, while respecting the real motor's limits (maximum torque ±1 N·m and its top speed).
+In simulation, the backstepping controller stabilizes the pendulum at the upright equilibrium in approximately **0.5 s** from a range of initial conditions, within the actuator limits of ±1 N·m torque and the motor's maximum speed. The controller was then validated in real time on the physical rig using a Raspberry Pi 5.
 
 <p align="center"><img src="images/pendulum-response.jpg" width="70%"></p>
 
-## How it works
+## Technical Approach
 
-**Model.** The equations of motion were derived with the Euler–Lagrange method (including friction) and built in MATLAB/Simulink.
+**Modeling.** Nonlinear equations of motion derived with the Euler–Lagrange formulation, including viscous friction, and implemented in MATLAB/Simulink.
 
-**Controller.** A backstepping controller based on Lyapunov stability theory. A Stateflow chart switches between start-up, stabilizing and balanced modes. A MATLAB script found the controller gains automatically by testing combinations until the pendulum stayed within 0.1 rad of upright for 5 seconds.
+**Control.** Lyapunov-based backstepping controller supervised by a Stateflow chart that manages the initialization, stabilization and balanced operating modes. Controller gains were selected through an automated parameter sweep requiring the pendulum to remain within 0.1 rad of upright for 5 s.
 
-**Hardware.** A test rig was built with a JGB37-520 DC motor, an MD10C motor driver, a 2000-pulse encoder, an ACS712 current sensor, an Arduino Uno and a Raspberry Pi 5.
+**Hardware.** Test rig with a JGB37-520 DC motor, an MD10C motor driver, a 2000 P/R rotary encoder, an ACS712 current sensor, an Arduino Uno and a Raspberry Pi 5.
 
-## My role
+## My Role
 
-✏️ *[Replace this line with 1–2 sentences about what you personally did in this project.]*
+Derived the nonlinear dynamics using the Euler–Lagrange formulation, built the MATLAB/Simulink model, and implemented the backstepping controller, which was validated in real time on a Raspberry Pi 5.
 
-## What's in this folder
+## Repository Contents
 
 | Folder | Contents |
 |---|---|
-| [1- Project Report](1-%20Project%20Report/) | Report written as a research paper (PDF) |
+| [1- Project Report](1-%20Project%20Report/) | Paper-format project report (PDF) |
 | [2- Source Code](2-%20Source%20Code/) | Simulink model, controller and gain-tuning scripts |
-| [3- Pictures](3-%20Pictures/) | Photo of the test rig |
+| [3- Pictures](3-%20Pictures/) | Test rig |
 | [4- Videos](4-%20Videos/) | Project video |
 
 **Team:** Bassam Walid, Styven Hany, Youssef Mohamed Abodeb, Yassin Hesham, Mostafa Shakweer, Somaya Magdy<br>

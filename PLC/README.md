@@ -1,22 +1,26 @@
-# ⚙️ PLC & Logic Control Exercises
+# PLC Logic and Electro-Pneumatic Control
 
-**Mechatronics lab exercises · German University in Cairo · 2024**
+**Mechatronics Lab · German University in Cairo · 2024**
 
 <p align="center">
   <img src="images/logic-diagram.png" width="48%">
   <img src="images/relay-circuit.png" width="48%">
 </p>
 
-## Summary
+## Overview
 
-Practice circuits for controlling pneumatic cylinders, built and simulated in Festo FluidSim. They include relay (ladder-style) circuits and logic programs made from function blocks — AND and OR gates and RS flip-flops (memory latches) — like the ones used to program small PLCs.
+Logic-control and electro-pneumatic circuits designed and simulated in Festo FluidSIM.
 
-## What's in this folder
+**Logic controller (FBD).** A logic controller programmed as a function block diagram, using AND/OR logic and set/reset latches to drive a motor, horns, an indicator lamp and a solenoid through relays from push-button and switch inputs.
+
+**Electro-pneumatic sequencing.** An electro-pneumatic circuit that sequences two double-acting cylinders using 5/2 double-solenoid valves and limit switches.
+
+## Repository Contents
 
 | Folder | Contents |
 |---|---|
-| [1- Fluid Sim](1-%20Fluid%20Sim/) | FluidSim circuit files |
-| [2- Pictures](2-%20Pictures/) | Screenshots of the circuits |
-| [3- Videos](3-%20Videos/) | Screen recording of a simulation |
+| [1- Fluid Sim](1-%20Fluid%20Sim/) | FluidSIM circuit files |
+| [2- Pictures](2-%20Pictures/) | Circuit screenshots |
+| [3- Videos](3-%20Videos/) | Screen recording of a simulation run |
 
-**Tools:** Festo FluidSim · Function block diagrams · Relay logic
+**Tools:** Festo FluidSIM · Function block diagram (FBD) · Relay logic · Electro-pneumatics

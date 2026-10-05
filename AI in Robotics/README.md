@@ -1,24 +1,27 @@
-# 🏠 AI Task Planning for a Home Service Robot
+# AI Task Planning for a Home Service Robot
 
-**AI in Robotics (MCTR 912) · German University in Cairo · 2025 · Team 5 (4 students)**
+**AI in Robotics (MCTR 912) · German University in Cairo · 2025 · Team project (4 members)**
 
 <p align="center"><img src="images/gazebo.jpg" width="85%"></p>
 
-📄 [Read the report (PDF)](1-%20Project%20Report/AI%20in%20Robotics%20m3.pdf)
+**Documentation:** [Milestone 3 report (PDF)](1-%20Project%20Report/AI%20in%20Robotics%20m3.pdf)
 
-## Summary
+## Overview
 
-A simulated home robot that receives a goal — for example, "move this object to another room" — and works out the steps by itself. It combines AI planning with ROS 2 robot navigation inside a simulated apartment.
+An integrated symbolic-planning and navigation system for a simulated domestic service robot. User-defined goals, such as relocating an object to another room, are automatically translated into executable action plans and carried out in a simulated apartment.
 
-## How it works
+## Technical Approach
 
-The robot keeps a "knowledge base" of a four-room apartment (kitchen, living room, bedroom and bathroom) and eight household objects. When the user types a goal, the system writes it as a planning problem in PDDL and solves it with the Fast Downward planner, which returns a list of *move*, *pick* and *place* actions. An executor then carries out each action, sending navigation goals to the ROS 2 Nav2 stack, and updates the knowledge base after every step. Everything was demonstrated with a TurtleBot3 robot with an OpenManipulator arm in Gazebo.
+A knowledge base represents a four-room apartment (kitchen, living room, bedroom and bathroom), its connectivity, eight household objects and the robot state. User goals are converted into PDDL problem files and solved with the Fast Downward classical planner, producing sequences of *move*, *pick* and *place* actions. A plan-executor node maps navigation actions to ROS 2 Nav2 goals and updates the knowledge base after each step. The system was demonstrated with a TurtleBot3 equipped with an OpenManipulator arm in Gazebo.
 
-## My role
+<!--
+## My Role
 
-✏️ *[Replace this line with 1–2 sentences about what you personally did in this project.]*
+Replace this paragraph with one or two sentences about your personal contribution,
+then delete the first and last lines of this block so the section becomes visible.
+-->
 
-## What's in this folder
+## Repository Contents
 
 | Folder | Contents |
 |---|---|
